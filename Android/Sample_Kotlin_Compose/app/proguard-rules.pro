@@ -23,3 +23,5 @@
 -keep public class com.mapsted.** { public protected *; }
 -keep interface com.carto.** { *; }
 -keep public class com.carto.** { public protected *; }
+# Mapsted SDK (joda-time transitive) — required for R8/minified release builds
+-dontwarn org.joda.convert.**

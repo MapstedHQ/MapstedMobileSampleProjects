@@ -7,7 +7,7 @@ import android.widget.ProgressBar
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.mapsted.MapstedBaseApplication
-import com.mapsted.corepositioning.cppObjects.swig.Position
+import com.mapsted.core.engine.Position
 import com.mapsted.positioning.CoreApi
 import com.mapsted.positioning.CoreApi.CoreInitCallback
 import com.mapsted.positioning.CoreApi.Location.PositionChangeListener

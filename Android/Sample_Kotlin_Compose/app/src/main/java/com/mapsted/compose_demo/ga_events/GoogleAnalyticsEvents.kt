@@ -1,9 +1,9 @@
 package com.mapsted.compose_demo.ga_events
 
 import android.util.Log
-import com.mapsted.corepositioning.cppObjects.bridge_interfaces.MarketingEventCallback
-import com.mapsted.corepositioning.cppObjects.swig.MarketingDataCallback
-import com.mapsted.corepositioning.cppObjects.swig.RoutePathType
+import com.mapsted.core.engine.MarketingEventCallback
+import com.mapsted.core.engine.MarketingDataCallback
+import com.mapsted.core.engine.RoutePathType
 import com.mapsted.map.MapApi
 import com.mapsted.map.MapApi.PropertyPlotListener
 import com.mapsted.map.MapSelectionChangeListener
@@ -154,15 +154,15 @@ class GoogleAnalyticsEvents(val mapApi: MapApi?, val coreApi: CoreApi?, val mapU
         coreApi?.marketing()?.addMarketingEventListener(object : MarketingEventCallback {
             override fun onMarketingContentRequest(
                 propertyId: Int,
-                callback: MarketingDataCallback?
+                callback: MarketingDataCallback
             ) {
 
             }
 
             override fun onMarketingEvent(
                 propertyId: Int,
-                triggerId: String?,
-                campaignId : String?
+                triggerId: String,
+                campaignId : String
             ) {
                 /*marketingApi?.repo()?.getFeedsUsingPropertyId(propertyId){ feedList ->
                     val feed = feedList.first { it.campaignId == campaignId }

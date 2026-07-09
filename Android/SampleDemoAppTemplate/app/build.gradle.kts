@@ -11,7 +11,9 @@ android {
 
     defaultConfig {
         applicationId = "com.example.sampledemoapp"
-        minSdk = 24
+        minSdk = 26
+        manifestPlaceholders["versionCode"] = "1"
+        manifestPlaceholders["dateString"] = "2026-07-09"
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -33,21 +35,23 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-
     buildFeatures {
         dataBinding = true
         viewBinding = true
     }
 
-    packagingOptions {
+    packaging {
         resources {
             excludes += "/META-INF/gradle/*"
             excludes += "/META-INF/*"}
     }
 }
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8
+    }
+}
+
 configurations {
     implementation{
         exclude(group = "org.jetbrains", module = "annotations")
@@ -71,7 +75,6 @@ dependencies {
     implementation(libs.app.template.core)
     implementation(libs.sdk.loc.share)
     implementation(libs.sdk.loc.marketing)
-    implementation (libs.sdk.alerts)
     implementation(libs.sdk.ui.components)
     implementation(libs.sdk.map.ui)
     implementation(libs.sdk.map)

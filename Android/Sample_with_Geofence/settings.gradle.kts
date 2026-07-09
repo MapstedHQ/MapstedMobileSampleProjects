@@ -19,7 +19,7 @@ dependencyResolutionManagement {
         maven {
             url = uri("https://jitpack.io")
         }
-        maven { url = uri("https://mobilesdk.mapsted.com:8443/artifactory/gradle-mapsted") }
+        maven { url = uri("https://mapstedhq.github.io/mapsted-android-maven") }
     }
 }
 

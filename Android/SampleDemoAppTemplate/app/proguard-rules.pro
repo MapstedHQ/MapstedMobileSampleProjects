@@ -19,3 +19,5 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+# Mapsted SDK (joda-time transitive) — required for R8/minified release builds
+-dontwarn org.joda.convert.**

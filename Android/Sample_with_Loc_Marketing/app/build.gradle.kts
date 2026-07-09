@@ -1,4 +1,3 @@
-import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
 
 plugins {
     alias(libs.plugins.android.application)
@@ -11,7 +10,9 @@ android {
 
     defaultConfig {
         applicationId = "com.mapsted.samplelocmarketing"
-        minSdk = 24
+        minSdk = 26
+        manifestPlaceholders["versionCode"] = "1"
+        manifestPlaceholders["dateString"] = "2026-07-09"
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -32,10 +33,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-
     packaging {
         resources.excludes.add("META-INF/gradle/*")
         resources.excludes.add("META-INF/*")
@@ -45,6 +42,12 @@ android {
         dataBinding = true
     }
 
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8
+    }
 }
 
 dependencies {
@@ -64,4 +67,7 @@ dependencies {
     implementation(libs.sdk.core)
     implementation(libs.sdk.inapp.notification)
     implementation(libs.sdk.geofence)
+
+    // Image loading (previously pulled in transitively; declared directly for SDK 26.7.1)
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 }

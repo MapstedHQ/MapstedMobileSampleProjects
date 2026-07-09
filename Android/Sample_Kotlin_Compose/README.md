@@ -15,7 +15,7 @@ allprojects {
         google()
         mavenCentral()
         maven {
-            url "https://sdk.mapsted.com/maven"
+            url "https://mapstedhq.github.io/mapsted-android-maven"
         }
     }
 }
@@ -25,9 +25,9 @@ In your **app-level** `build.gradle` file, add the SDK dependencies:
 
 ```gradle
 dependencies {
-    implementation 'com.mapsted:sdk-core:<version>'
-    implementation 'com.mapsted:sdk-map:<version>'
-    implementation 'com.mapsted:sdk-map-ui:<version>'
+    implementation 'com.mapsted:android-sdk-core:<version>'
+    implementation 'com.mapsted:android-sdk-map:<version>'
+    implementation 'com.mapsted:android-sdk-ui:<version>'
     // Add other SDK modules if needed
 }
 ```

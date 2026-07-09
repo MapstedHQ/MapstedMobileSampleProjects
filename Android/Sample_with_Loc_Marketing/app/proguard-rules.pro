@@ -21,3 +21,5 @@
 #-renamesourcefileattribute SourceFile
 
 -dontwarn module-info
+# Mapsted SDK (joda-time transitive) — required for R8/minified release builds
+-dontwarn org.joda.convert.**

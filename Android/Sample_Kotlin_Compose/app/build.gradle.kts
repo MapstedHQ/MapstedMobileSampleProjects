@@ -10,7 +10,9 @@ android {
 
     defaultConfig {
         applicationId = "com.mapsted.compose_demo"
-        minSdk = 24
+        minSdk = 26
+        manifestPlaceholders["versionCode"] = "1"
+        manifestPlaceholders["dateString"] = "2026-07-09"
         compileSdk = 35
         versionCode = 5
         versionName = "1.0.4"
@@ -41,9 +43,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    kotlinOptions {
-        jvmTarget = "11"
-    }
     buildFeatures {
         compose = true
         dataBinding = true
@@ -52,6 +51,12 @@ android {
     packaging {
         resources.excludes.add("META-INF/gradle/*")
         resources.excludes.add("META-INF/*")
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
     }
 }
 
@@ -83,10 +88,10 @@ dependencies {
     implementation("com.google.android.gms:play-services-tasks:18.0.1")
 
     // Mapsted
-    val mapstedSdkVersion = "6.2.9"
-    implementation("com.mapsted:sdk-map-ui:$mapstedSdkVersion")
-    implementation("com.mapsted:sdk-map:$mapstedSdkVersion")
-    implementation("com.mapsted:sdk-core:$mapstedSdkVersion")
+    val mapstedSdkVersion = "26.7.1"
+    implementation("com.mapsted:android-sdk-ui:$mapstedSdkVersion")
+    implementation("com.mapsted:android-sdk-map:$mapstedSdkVersion")
+    implementation("com.mapsted:android-sdk-core:$mapstedSdkVersion")
     // add below dependency to use topbar notifications
-    //implementation ("com.mapsted:sdk-topbar-notifications:${mapstedSdkVersion}")
+    //implementation ("com.mapsted:android-sdk-topbar-notifications:${mapstedSdkVersion}")
 }
