@@ -6,7 +6,7 @@ This sample app demonstrates an interactive map that displays Points of Interest
 
 1. Clone iOS Mapsted Sample project to your local computer.
 
-2. Run <b>pod update</b> to install the pods
+2. Run <b>pod install</b> to install the pods
 
 3. Open <b>SampleMapUIPOISelection.xcworkspace</b> in Xcode.
 

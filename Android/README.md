@@ -1,14 +1,33 @@
-<h1>Mapsted Sample App (Android)</h1>
+# Mapsted Mobile SDK — Android Samples
 
-This repo demonstrates various Mapsted mobile sdk integrations. 
+A set of focused Android sample apps showing how to integrate indoor positioning,
+mapping, and wayfinding with the **Mapsted Mobile SDK**.
 
-A sample <b>Mapsted licence file</b> is included, which contains access to the Square One Shopping Centre (propertyId: 504).
+📚 **Documentation:** [developer.mapsted.com/mobile-sdk](https://developer.mapsted.com/mobile-sdk/)
+🚀 **Getting Started (Android):** [developer.mapsted.com/mobile-sdk/getting-started/android-getting-started](https://developer.mapsted.com/mobile-sdk/getting-started/android-getting-started/)
 
-For more information, please visit <a href="https://developer.mapsted.com/">Developer Docs Page</a>.
+## Samples
 
-<h2>How to set up</h2>
+| Sample | What it demonstrates |
+|---|---|
+| `SampleDemoAppTemplate` | A complete, out-of-the-box app template |
+| `Sample_Kotlin_Compose` | Integrating the SDK with Jetpack Compose |
+| `Sample_with_AddCustomIcons` | Add your own icons and markers to the map |
+| `Sample_with_Geofence` | Geofence triggers for entities, floors, buildings, and properties |
+| `Sample_with_Loc_Marketing` | Location-based marketing notifications |
+| `Sample_with_Loc_Share` | Share a live location |
 
-1. Clone the Android Mapsted Sample project to your local computer. 
-   `git clone https://github.com/Mapsted/MapstedSampleAndroid` 
+## How to run
 
-2. Open one of the sample projects in Android studio, based on your need.
+1. Open the sample you want in **Android Studio**.
+2. Build and run it on a device or emulator.
+
+The Mapsted SDK is resolved automatically from the public Maven repository configured
+in each project. For dependencies, requirements, and troubleshooting, follow the
+[Android Getting Started guide](https://developer.mapsted.com/mobile-sdk/getting-started/android-getting-started/).
+
+## Demo licence
+
+A **demo licence file** is included with access to a sample venue —
+**Square One Shopping Centre** (property `504`) — so the samples run out of the box.
+To use your own venue, request a licence through [mapsted.com](https://mapsted.com/).

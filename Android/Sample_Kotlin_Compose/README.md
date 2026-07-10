@@ -70,7 +70,7 @@ Add the following permissions to your `AndroidManifest.xml`:
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 ```
 
-*Note:* Some permissions may vary depending on SDK modules used (e.g., BLE, Wi-Fi, etc.).
+*Note:* The exact set of permissions may vary depending on the SDK modules you use.
 
 ---
 
