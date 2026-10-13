@@ -5,7 +5,7 @@ source 'https://cdn.cocoapods.org/'
 source 'https://github.com/MapstedHQ/podspec.git'
 
 def common_pods
-  pod 'mapsted-sdk-app-template', '~> 26.7.1'
+  pod 'mapsted-sdk-app-template', '26.10.2'
 end
 target 'MapstedAppTemplateSampleIOS' do
   common_pods  

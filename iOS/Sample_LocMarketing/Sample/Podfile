@@ -6,7 +6,7 @@ source 'https://github.com/MapstedHQ/podspec.git'
 use_frameworks!
 
 target 'Sample' do
-  pod 'mapsted-sdk-loc-marketing', '~> 26.7.1'
-  pod 'mapsted-sdk-triggers-core', '~> 26.7.1'
+  pod 'mapsted-sdk-loc-marketing', '26.10.2'
+  pod 'mapsted-sdk-triggers-core', '26.10.2'
   pod 'SDWebImage'
 end
