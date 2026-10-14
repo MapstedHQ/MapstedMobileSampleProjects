@@ -6,6 +6,6 @@ source 'https://github.com/MapstedHQ/podspec.git'
 use_frameworks!
 
 target 'SampleMapUIPOISelection' do
-  pod 'mapsted-sdk-map-ui', '26.10.2'
-  pod 'mapsted-sdk-map', '26.10.2'
+  pod 'mapsted-sdk-map-ui', '26.10.3'
+  pod 'mapsted-sdk-map', '26.10.3'
 end
